@@ -1,3 +1,240 @@
 //====================================================================================================
+.page {
+	background-color: #f7f7f7;
+	.menu-open & {
+		filter: blur(4px);
+	}
+	&__about {
+		position: relative;
+		&:not(:last-child) {margin-bottom: 70px;}
+	}
+
+	&__quote {
+	}
+}
+.about {
+
+	&__container {
+		position: relative;
+	}
+
+	&__decor {
+		position: absolute;
+		z-index: 2;
+		@include adaptiveValue("top", 220, 85,1216,768,1);
+		@include adaptiveValue("left", 528, 180,1216,768,1);
+		@media (max-width:$mobile){
+			 left: initial;
+			 right: 0; 
+		}
+	}
+
+	&__breadcrumbs {
+		padding: 26px 0px;
+		white-space: nowrap;
+		overflow: auto;
+	}
+
+	&__data {
+		
+	}
+
+	&__content {
+		display: flex;
+		@include adaptiveValue("column-gap", 136, 40,1216,768,1);
+		&_reverse {
+			flex-direction: row-reverse;
+			& .content__item {
+				margin-top: 0;
+			}
+			@media (max-width:$mobile){
+				 flex-direction: column-reverse; 
+			}
+		}
+		@media (max-width:$mobile){
+			 flex-direction: column; 
+		}
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 104, 94,1216,768,1);
+		}
+	}
+}
+
+.breadcrumbs {
+
+	&__list {
+		display: flex;
+	}
+
+	&__item {
+		&:last-child {
+			.breadcrumbs__link::after {
+				display: none;
+			}
+		}
+	}
+
+	&__link {
+		color: #949799;
+		font-size: rem(12);
+		line-height: math.div(20 , 12);
+		display: flex;
+		align-items: center;
+		transition: color 0.3s;
+		&:hover{
+			color: $primaryRed;
+		}
+		&::after{
+			content:'/';
+			margin: 0px 8px;
+		}
+	}
+}
+
+.content {
+
+	&__img {
+		flex: 0 0 48.684211%; /* 592/1216 */
+		img {
+			width: 100%;
+			height: auto;
+		}
+		@media (max-width:$mobile){
+			 flex: 0 0 100%; 
+		}
+	}
+
+	&__item {
+		@include adaptiveValue("margin-top", 83, 32,1216,768,1);
+	}
+
+	&__title {
+		@include adaptiveValue("font-size", 48, 40,1216,768,1);
+		font-weight: 700;
+		@include adaptiveValue("margin-bottom", 44, 32,1216,768,1);
+	}
+
+	&__text {
+		p {
+			font-size: rem(16);
+			line-height: math.div(22 , 16);
+			&:not(:last-child) {margin-bottom: 24px;}
+			@media (max-width:$mobile){
+				 &:not(:last-child) {margin-bottom: 32px;} 
+			}
+		}
+		@include adaptiveValue("margin-bottom", 92, 32,1216,768,1);
+		&_second {
+			margin-bottom: 24px;
+			@media (max-width:$mobile){
+				margin: 32px 0px;
+			}
+		}
+	}
+
+	&__link {
+		display: inline-block;
+		padding: 16px;
+		min-width: 280px;
+		background-color: $primaryRed;
+		font-size: rem(16);
+		color: #fff;
+		text-align: center;
+		font-weight: 700;
+		line-height: math.div(32 , 16);
+		transition: background-color 0.3s;
+		@media (max-width:$mobile){
+			 width: 100%; 
+		}
+		&:hover{
+			
+			background-color: $mainColor;
+		}
+	}
+
+	&__list {
+	}
+
+	&__list-item {
+		position: relative;
+		&:not(:last-child) {margin-bottom: 4px;}
+		padding-left: 24px;
+		@media (max-width:$mobile){
+			 &:not(:last-child) {margin-bottom: 32px;} 
+		}
+		p {
+			line-height: math.div(22 , 16);
+		}
+		&::before{
+			content:'';
+			position: absolute;
+			top: 8px;
+			left: 0;
+			width: 6px;
+			height: 6px;
+			border-radius: 50px;
+			background-color: $primaryRed;
+		}
+	}
+}
+.section {
+}
+.quote {
+
+	&__container {
+		position: relative;
+	}
+
+	&__decor {
+		position: absolute;
+		top: 167px;
+		@include adaptiveValue("left", 300, 100,1216,768,1);
+		@media (max-width:$mobile){
+			margin-top: 24px;
+			margin-left: 24.615385%; /* 80/325 */
+			position: relative;
+			display: block;
+			   top: initial;
+			//   bottom: 20%;
+			  left: initial; 
+		}
+	}
+
+	&__content {
+		display: flex;
+		@include adaptiveValue("column-gap", 136, 36,1216,768,1);
+		@media (max-width:$mobile){
+			 flex-direction: column; 
+		}
+	}
+
+	&__img {
+		flex: 0 0 23.026316%; /* 280/1216 */
+		img {
+			width: 100%;
+			height: auto;
+		}
+		@media (max-width:$mobile){
+			margin-left: auto;
+			 width: 64%; /* 240/375 */
+		}
+	}
+
+	&__text {
+		@include adaptiveValue("margin-top", 93, 20,1216,768,1);
+		@media (max-width:$mobile){
+			
+			 margin-top: 28px; 
+		}
+	}
+
+	&__quote {
+		@include adaptiveValue("font-size", 48, 40,1216,768,1);
+		font-weight: 700;
+		span {
+			color: $primaryRed;
+		}
+	}
+}
 
 //====================================================================================================

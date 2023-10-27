@@ -222,6 +222,20 @@
 		@media (max-width:$mobile){
 			 &:not(:last-child) {margin-bottom: 20px;} 
 		}
+		&.switch-lang .actions__l-ru{
+			display: block;
+		}
+		&.switch-lang .actions__l-en{
+			display: none;
+		}
+	}
+
+	&__l-en {
+
+	}
+
+	&__l-ru {
+		display: none;
 	}
 
 	&__search-user {
@@ -252,8 +266,9 @@
 		height: rem(16);
 		cursor: pointer;
 		z-index: 5;
+	
 		span,
-		&::before,
+		&::before
 		 {
 			content: "";
 			transition: all 0.3s ease 0s;

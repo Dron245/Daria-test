@@ -7,8 +7,72 @@
 		<div class="wrapper">
 			@@include('html/_header.htm',{})
 			<main class="page">
+				<section class="page__about about">
+					<div class="about__container">
+						<div class="about__breadcrumbs breadcrumbs">
+							<ul class="breadcrumbs__list">
+								<li class="breadcrumbs__item">
+									<a href="#" class="breadcrumbs__link">Главная</a>
+								</li>
+								<li class="breadcrumbs__item">
+									<a href="#" class="breadcrumbs__link">Дарья Свистунова</a>
+								</li>
+							</ul>
+						</div>
+						<div class="about__decor">
+							<picture>
+								<source srcset="img/decor-main_m.svg" media="(max-width: 767.98px)">
+								<img src="@img/decor-main.svg" alt="">
+							</picture>
+						</div>
+						<div class="about__data">
+							<div data-aos="fade-left" class="about__content content">
+								<div class="content__img content__img_first">
+									<img src="@img/FOTO-main.jpg" alt="Daria">
+								</div>
+								<div class="content__item">
+									<div data-da=".content__img_first, 768,0" class="content__title">Дарья Свистунова</div>
+									<div class="content__text">
+										<p>Операционный директор Sidorin Lab, спикер-практик и гуру клиентского сервиса. Руководит командой из 200 человек, обожает ходить в горы и пробовать треккинговые маршруты.</p>
+										<p>В Sidorin Lab Даша прошла путь от линейного аккаунт-менеджера до операционного директора. Ее заслуги можно перечислять долго: среди них и удержание компании в период пандемии, и запуск новых услуг (PR и SMM), и рост числа сотрудников даже в кризисные годы.</p>
+									</div>
+									<a href="#" class="content__link">Подробнее</a>
+								</div>
+							</div>
+							<div data-aos="fade-right" class="about__content about__content_reverse content">
+								<div class="content__img content__img_second">
+									<img src="@img/city-main.jpg" alt="Калуга">
+								</div>
+								<div class="content__item">
+									<div data-da=".content__img_second, 767.99,0" class="content__title">Образование и первое место работы</div>
+									<div class="content__text content__text_second">
+										<p>Родилась в Калуге. Изучала банковское дело в Государственном университете Министерства финансов РФ (выпуск 2011 года). Через два года после начала учебы получила работу специалиста по социальной рекламе в Министерстве экологии и благоустройства Калужской области. За пять лет карьеры в госсекторе Даша успела вырасти до должности заместителя директора, начальника отдела природопользования, а еще:</p>
+									</div>
+									<ul class="content__list">
+										<li class="content__list-item"><p>разработала предложение от Калужской области для участия в конкурсном отборе проекта «Развитие единой государственной системы экологического мониторинга». По его итогам региону удалось занять второе место;</p></li>
+										<li class="content__list-item"><p>составила проект закона Калужской области по оплате труда работников сферы охраны окружающей среды и природопользования.</p></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section data-aos="fade-up" class="section page__quote quote">
+					<div class="quote__container">
+						<div class="quote__content">
+							<div class="quote__img">
+								<img src="@img/DariyaSmall-main.jpg" alt="Дарья">
+							</div>
+							<div class="quote__decor">
+								<img src="@img/decor02-main.svg" alt="">
+							</div>
+							<div class="quote__text">
+								<p class="quote__quote">«Не существует подходящего момента, чтобы заняться чем-то новым или решиться на то, что вас по тем или иным причинам давно пугает. <span>Надо идти и делать.</span>»</p>
+							</div>
+						</div>
+					</div>
+				</section>
 			</main>
-			@@include('html/_footer.htm',{})
 		</div>
 		@@include('html/_popup.htm',{})
 		@@include('html/_js.htm',{})
